@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A stunning image gallery showcasing beautiful nature photography from around the world." />
+  <title>Image Gallery – Explore Beautiful Nature Images</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="gallery-wrapper">
+
+    <header class="gallery-header">
+      <h1 class="gallery-title">Image Gallery</h1>
+      <p class="gallery-subtitle">Explore Beautiful Nature Images</p>
+    </header>
+
+    <!-- Featured / Hero Image -->
+    <div class="featured-container" id="featured-container">
+      <img
+        id="featured-image"
+        src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200&q=80"
+        alt="Featured nature landscape"
+        class="featured-image"
+      />
+      <div class="featured-overlay" id="featured-overlay">
+        <span class="featured-label" id="featured-label">Yosemite Valley, USA</span>
+      </div>
+    </div>
+
+    <!-- Thumbnail Grid -->
+    <div class="thumbnail-grid" id="thumbnail-grid">
+
+      <div class="thumb-item active" id="thumb-0"
+           data-src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200&q=80"
+           data-label="Yosemite Valley, USA">
+        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400&q=70"
+             alt="Yosemite Valley" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+      <div class="thumb-item" id="thumb-1"
+           data-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
+           data-label="Mountain Road, Arizona">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=70"
+             alt="Mountain road" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+      <div class="thumb-item" id="thumb-2"
+           data-src="https://images.unsplash.com/photo-1439853949212-36089b28e060?w=1200&q=80"
+           data-label="Braies Lake, Italy">
+        <img src="https://images.unsplash.com/photo-1439853949212-36089b28e060?w=400&q=70"
+             alt="Braies Lake" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+      <div class="thumb-item" id="thumb-3"
+           data-src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80"
+           data-label="Ancient Forest, Oregon">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=70"
+             alt="Forest" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+      <div class="thumb-item" id="thumb-4"
+           data-src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80"
+           data-label="Tropical Beach Sunrise">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=70"
+             alt="Tropical beach" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+      <div class="thumb-item" id="thumb-5"
+           data-src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80"
+           data-label="Alps Reflection, Switzerland">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=70"
+             alt="Alps reflection" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+      <div class="thumb-item" id="thumb-6"
+           data-src="https://images.unsplash.com/photo-1520962880247-cfaf541d8354?w=1200&q=80"
+           data-label="Rocky Mountains, Canada">
+        <img src="https://images.unsplash.com/photo-1520962880247-cfaf541d8354?w=400&q=70"
+             alt="Rocky Mountains" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+      <div class="thumb-item" id="thumb-7"
+           data-src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&q=80"
+           data-label="Earth from Space">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&q=70"
+             alt="Earth from space" loading="lazy" />
+        <div class="thumb-shine"></div>
+      </div>
+
+    </div>
+    <!-- end thumbnail-grid -->
+
+  </div>
+  <!-- end gallery-wrapper -->
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&#10005;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8592;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-image" src="" alt="Enlarged view" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">&#8594;</button>
+  </div>
+  <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
